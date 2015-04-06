@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="208dp"
+          android:layout_height="match_parent"
+          android:background="@color/background_material_light"
+          >
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search1" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_marginTop="8dp" android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp" android:layout_marginBottom="4dp" android:background="@color/c_doujinshi"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search2" android:layout_toRightOf="@+id/search1"
+            android:layout_toEndOf="@+id/search1" android:layout_marginTop="8dp" android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" android:layout_marginBottom="4dp" android:background="@color/c_manga"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search3" android:layout_toRightOf="@+id/search2"
+            android:layout_toEndOf="@+id/search2" android:layout_marginTop="8dp" android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" android:layout_marginBottom="4dp" android:background="@color/c_artistcg"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search4" android:layout_toRightOf="@+id/search3"
+            android:layout_toEndOf="@+id/search3" android:layout_marginTop="8dp" android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" android:layout_marginBottom="4dp" android:background="@color/c_gamecg"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search5" android:layout_toRightOf="@+id/search4"
+            android:layout_toEndOf="@+id/search4" android:layout_marginTop="8dp" android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp" android:layout_marginBottom="4dp" android:background="@color/c_western"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search6" android:layout_below="@+id/search1" android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp" android:layout_marginRight="4dp" android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp" android:background="@color/c_nonh"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search7" android:layout_below="@+id/search1" android:layout_toRightOf="@+id/search1"
+            android:layout_toEndOf="@+id/search1" android:layout_marginBottom="8dp" android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp" android:layout_marginLeft="4dp" android:background="@color/c_imageset"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search8"
+            android:layout_below="@+id/search2" android:layout_toRightOf="@+id/search2"
+            android:layout_toEndOf="@+id/search2" android:layout_marginBottom="8dp" android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp" android:layout_marginLeft="4dp" android:background="@color/c_cosplay"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search9"
+            android:layout_below="@+id/search3" android:layout_toRightOf="@+id/search8"
+            android:layout_toEndOf="@+id/search8" android:layout_marginBottom="8dp" android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp" android:layout_marginLeft="4dp" android:background="@color/c_asianporn"
+            android:onClick="toggleButton"/>
+    <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/search10"
+            android:layout_below="@+id/search4" android:layout_toRightOf="@+id/search4"
+            android:layout_toEndOf="@+id/search4" android:layout_marginBottom="8dp" android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp" android:layout_marginLeft="4dp" android:background="@color/c_misc"
+            android:onClick="toggleButton"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_below="@+id/search6"
+            android:layout_alignLeft="@+id/search6" android:layout_alignStart="@+id/search6"
+            android:layout_alignRight="@+id/search10" android:layout_alignEnd="@+id/search10"
+            android:id="@+id/searchBox">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchQuery" android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchButton" android:background="@android:drawable/ic_menu_search"
+                android:onClick="doSearch"/>
+    </LinearLayout>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/searchName" android:layout_below="@+id/searchBox"
+            android:layout_alignLeft="@+id/searchBox" android:layout_alignStart="@+id/searchBox"
+            android:onClick="toggleCheckbox" />
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tags"
+            android:id="@+id/searchTags"
+            android:layout_below="@+id/searchBox" android:layout_toRightOf="@+id/searchName"
+            android:onClick="toggleCheckbox" android:layout_toEndOf="@+id/searchName"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desc"
+            android:id="@+id/searchDesc"
+                        android:layout_alignTop="@+id/searchTags" android:layout_toRightOf="@+id/searchTags"
+            android:onClick="toggleCheckbox" android:layout_toEndOf="@+id/searchTags"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Power"
+            android:id="@+id/searchLowPower" android:layout_below="@+id/searchName" android:layout_alignLeft="@+id/searchName"
+            android:onClick="toggleCheckbox" android:layout_alignStart="@+id/searchName" />
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expunged"
+            android:id="@+id/searchExpunged" android:layout_below="@+id/searchTags" android:layout_toRightOf="@+id/searchLowPower"
+            android:onClick="toggleCheckbox" android:layout_toEndOf="@+id/searchLowPower"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Downvoted"
+            android:id="@+id/searchDownvoted" android:layout_below="@+id/searchLowPower" android:layout_alignLeft="@+id/searchLowPower"
+            android:layout_alignStart="@+id/searchLowPower"
+            android:onClick="toggleCheckbox"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min stars: "
+            android:id="@+id/minStars" android:layout_below="@+id/searchDownvoted" android:layout_alignLeft="@+id/searchDownvoted"
+            android:onClick="toggleCheckbox" android:layout_alignStart="@+id/searchDownvoted" />
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minRating" android:layout_below="@+id/searchDownvoted" android:layout_toRightOf="@+id/minStars"
+            android:layout_toEndOf="@+id/minStars"/>
+
+</RelativeLayout>

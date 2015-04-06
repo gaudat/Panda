@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pagerthumb" android:adjustViewBounds="true"/>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:background="@color/dim_foreground_disabled_material_dark"
+            android:padding="4dp" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:text="Gallery Title"
+                android:id="@+id/pagertitle"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:lines="2"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery Desc"
+                android:id="@+id/pagerdesc"
+                android:layout_below="@+id/pagertitle" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small.Inverse" android:lines="1"/>
+        <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:id="@+id/pagertype"
+                android:layout_alignTop="@+id/pagerrating" android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pagerrating"
+                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                android:layout_alignBottom="@+id/pagerdesc" android:layout_toLeftOf="@+id/pagertype"
+                android:layout_toStartOf="@+id/pagertype"/>
+    </RelativeLayout>
+    <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pagerprogress" android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:focusableInTouchMode="false"/>
+</RelativeLayout>

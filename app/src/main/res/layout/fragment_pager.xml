@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="name.gaudat.panda.PagerFragment"
+        >
+
+
+    <view android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          class="android.support.v4.view.ViewPager" android:id="@+id/pager" android:layout_gravity="center"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/navcontainer" android:background="@color/dim_foreground_disabled_material_dark">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;&lt;"
+                android:id="@+id/tofirst" style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                android:onClick="toFirstPage"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;"
+                android:id="@+id/toprev" style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                android:nestedScrollingEnabled="false" android:onClick="toPrevPage"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:gravity="center" android:layout_weight="1" android:onClick="changePage"
+                android:id="@+id/pagedetail"/>
+        <EditText
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pagechange" android:layout_weight="1" android:gravity="center"
+                android:visibility="gone"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:id="@+id/tonext" style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                android:onClick="toNextPage"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">>"
+                android:id="@+id/tolast" style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                android:onClick="toLastPage"/>
+    </LinearLayout>
+</FrameLayout>

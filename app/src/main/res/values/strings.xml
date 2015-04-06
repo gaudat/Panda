@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Panda</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_parse_url">Panda</string>
+    <string name="title_activity_gallery_pager">Panda</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_viewer">Viewer</string>
+    <string name="action_dl">Download</string>
+    <string name="action_info">Information</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_pager">PagerActivity</string>
+    <string name="action_download_image">Download Image</string>
+    <string name="action_image_details">Image Properties</string>
+    <string name="action_update_image">Update Image</string>
+    <string name="action_first">Go to first page</string>
+    <string name="action_last">Go to last page</string>
+    <string name="action_goto_page">Go to page...</string>
+    <string name="action_download_gallery">Download Gallery</string>
+    <string name="action_view_gallery">View Gallery</string>
+    <string name="parse_error">Something went wrong. Have you got the right link?</string>
+    <string name="action_search_image">Search Image</string>
+    <string name="search_loading_more">Loading more...</string>
+    <string name="search_loading_all">That\'s all.</string>
+    <string name="network_error">Can\'t get Panda data. Are you sure this app can access the Intent?</string>
+    <string name="action_gallery_details">Gallery details</string>
+
+</resources>

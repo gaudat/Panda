@@ -1,0 +1,74 @@
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      class="com.sothree.slidinguppanel.SlidingUpPanelLayout"
+      android:gravity="bottom" android:id="@+id/slidingpane">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/container">
+
+    </FrameLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:context="name.gaudat.panda.GalleryDetailFragment"
+                    android:background="@color/dim_foreground_disabled_material_dark">
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                android:text="Some Gallery"
+                android:id="@+id/title"
+                android:layout_alignParentTop="true" android:layout_toRightOf="@+id/gallerycolor"
+                android:layout_toEndOf="@+id/gallerycolor"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:text="Some Gallery in Japanese"
+                android:id="@+id/titlealt"
+                android:layout_below="@+id/title" android:layout_alignLeft="@+id/title"
+                android:layout_alignStart="@+id/title" android:layout_marginTop="0dp"
+                android:layout_marginBottom="8dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:text="Uploaded by Me @ 2014-01-01 00:00\nJapanese 12 @ 1.23 MB"
+                android:id="@+id/galleryuploader"
+                android:layout_below="@+id/titlealt" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" android:lines="2"/>
+        <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/gallerycolor" android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="8dp"/>
+        <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/galleryrating"
+                android:numStars="5"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                android:layout_below="@+id/galleryuploader" android:layout_toLeftOf="@+id/galleryratingtext"
+                android:layout_toStartOf="@+id/galleryratingtext"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1.23 (45)"
+                android:id="@+id/galleryratingtext" android:layout_alignBottom="@+id/galleryrating"
+                android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading Tags"
+                android:scrollHorizontally="false"
+                android:id="@+id/taglist"
+                android:layout_below="@+id/galleryratingtext" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+</view>

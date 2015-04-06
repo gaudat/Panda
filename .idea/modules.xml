@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Panda.iml" filepath="$PROJECT_DIR$/Panda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestureimageview/gestureimageview.iml" filepath="$PROJECT_DIR$/gestureimageview/gestureimageview.iml" />
+    </modules>
+  </component>
+</project>
+

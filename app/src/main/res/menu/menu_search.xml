@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--
+ Include fav for pager view
+ disable "fav" for other views
+ -change display mode
+ -favorites
+ -settings
+ -about
+-->
+    <item android:icon="@android:drawable/ic_menu_zoom"
+          android:id="@+id/action_toggle_search_drawer"
+          android:title="Show Search"
+          app:showAsAction="ifRoom"/>
+    <item android:icon="@android:drawable/ic_menu_sort_by_size"
+          android:id="@+id/action_change_sorting"
+          android:title="Change View"
+          app:showAsAction="ifRoom"/>
+    <item android:icon="@android:drawable/btn_star_big_off"
+          android:id="@+id/action_show_favorites"
+          android:title="Favorites"
+          app:showAsAction="ifRoom"/>
+    <item android:icon="@android:drawable/ic_menu_preferences"
+          android:id="@+id/action_go_settings"
+          android:title="Settings"
+          app:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_help"
+          android:id="@+id/action_go_help"
+          android:title="Help"
+          app:showAsAction="never"/>
+</menu>
